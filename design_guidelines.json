@@ -1,0 +1,137 @@
+{
+  "theme": "Light & Dark Toggle (Cinematic E-commerce)",
+  "archetype": "Archetype 1 (Organic & Earthy / E-commerce Context) + BookMyShow Brand DNA",
+  "brand_identity": {
+    "name": "ShowSpot",
+    "primary_color": "#F84464",
+    "tone": "Exciting, Seamless, Trustworthy"
+  },
+  "colors": {
+    "light": {
+      "background": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "primary": "#F84464",
+      "primary_hover": "#E03C5A",
+      "text_primary": "#0F172A",
+      "text_secondary": "#475569",
+      "border": "#E2E8F0",
+      "seat_available": "#FFFFFF",
+      "seat_selected": "#F84464",
+      "seat_booked": "#CBD5E1",
+      "ai_accent": "#6366F1"
+    },
+    "dark": {
+      "background": "#020617",
+      "surface": "#0F172A",
+      "primary": "#F84464",
+      "primary_hover": "#E03C5A",
+      "text_primary": "#F8FAFC",
+      "text_secondary": "#94A3B8",
+      "border": "#1E293B",
+      "seat_available": "#1E293B",
+      "seat_selected": "#F84464",
+      "seat_booked": "#334155",
+      "ai_accent": "#818CF8"
+    }
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Outfit",
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-black",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl font-bold",
+      "h4": "text-lg sm:text-xl font-semibold"
+    },
+    "body": {
+      "font_family": "Manrope",
+      "base": "text-base leading-relaxed",
+      "small": "text-sm",
+      "label": "text-xs tracking-[0.1em] uppercase font-bold text-secondary"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "p-4 md:p-8 lg:p-12",
+    "section_gap": "gap-12 md:gap-24",
+    "movie_grid": "grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6",
+    "seat_grid": "gap-2 sm:gap-4 justify-center items-center"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#F84464] hover:bg-[#E03C5A] text-white rounded-lg font-bold transition-all shadow-md hover:shadow-lg",
+      "secondary": "bg-transparent border-2 border-border text-text_primary hover:border-primary hover:text-primary rounded-lg font-bold transition-all",
+      "ai_chat": "bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-[0_0_20px_rgba(99,102,241,0.5)]"
+    },
+    "cards": {
+      "movie": "group relative overflow-hidden rounded-xl bg-surface border border-border shadow-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-300",
+      "overlay": "absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    },
+    "navigation": {
+      "header": "sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border transition-colors duration-300"
+    },
+    "seat_selection": {
+      "seat_button": "w-8 h-8 sm:w-10 sm:h-10 rounded-t-lg rounded-b-sm flex items-center justify-center text-xs font-semibold transition-all duration-200 border",
+      "screen": "w-full max-w-3xl h-12 sm:h-20 mx-auto rounded-[50%] border-t-4 border-primary/50 shadow-[0_-20px_50px_rgba(248,68,100,0.1)] mb-12 sm:mb-24"
+    }
+  },
+  "motion": {
+    "hover": "transition-transform duration-300 ease-out hover:scale-105",
+    "page_transition": "animate-in fade-in slide-in-from-bottom-4 duration-500",
+    "seat_select": "active:scale-90 transition-transform duration-100"
+  },
+  "media": {
+    "icons_library": "lucide-react",
+    "image_urls": {
+      "movies": [
+        {
+          "url": "https://images.unsplash.com/photo-1762356121454-877acbd554bb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwzfHxtb3ZpZSUyMHBvc3RlciUyMGFjdGlvbnxlbnwwfHx8fDE3NzQ1MDY4NDV8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Action Movie Poster 1",
+          "category": "movie_poster"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1761948245185-fc300ad20316?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwyfHxtb3ZpZSUyMHBvc3RlciUyMGFjdGlvbnxlbnwwfHx8fDE3NzQ1MDY4NDV8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Sci-Fi Monster Movie Poster",
+          "category": "movie_poster"
+        }
+      ],
+      "events": [
+        {
+          "url": "https://images.pexels.com/photos/4218027/pexels-photo-4218027.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "description": "Live Music Concert",
+          "category": "event_poster"
+        },
+        {
+          "url": "https://images.pexels.com/photos/2101487/pexels-photo-2101487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "description": "Standup Comedy Stage",
+          "category": "event_poster"
+        }
+      ],
+      "backgrounds": [
+        {
+          "url": "https://images.unsplash.com/photo-1766844649143-af98d71e346b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHw0fHxjaW5lbWElMjB0aGVhdGVyJTIwc2VhdHMlMjBkYXJrfGVufDB8fHx8MTc3NDUwNjg1NHww&ixlib=rb-4.1.0&q=85",
+          "description": "Empty Theater Screen Background for Hero Section",
+          "category": "hero_background"
+        }
+      ],
+      "ai_avatar": [
+        {
+          "url": "https://images.pexels.com/photos/6019019/pexels-photo-6019019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "description": "AI Chatbot Avatar",
+          "category": "avatar"
+        }
+      ]
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install required dependencies: `lucide-react`, `framer-motion`, `@hookform/resolvers`, `zod`, `date-fns`, `react-day-picker`.",
+    "Implement a robust Dark/Light mode toggle in the main layout.",
+    "Use Shadcn UI components but strip away heavy borders; prefer clean, minimalistic cards with subtle shadows.",
+    "The Home page should feature a Hero section with a dark cinematic background image and a 'Now Showing' movie grid.",
+    "Seat Selection UI MUST be interactive. Map out a grid (e.g., 10x10) representing a theatre layout. Use a curved line/div at the top to represent the screen.",
+    "Seats should have 3 states: Available (border only), Selected (Solid Primary Red), Booked (Solid Grey, disabled).",
+    "Integrate a floating AI Chatbot button (bottom-right) that opens a sleek chat dialog. Use the ai_avatar image provided for the bot.",
+    "Use standard React context or a lightweight store (Zustand) for the booking flow state (movie -> date -> seats -> checkout).",
+    "Filters (Date, Genre, Language) should be placed either as a sticky left sidebar or horizontal pill scrollbar below the header.",
+    "Ensure all interactive elements have `data-testid` attributes (e.g., `data-testid=\"movie-card-1\"`, `data-testid=\"seat-A1\"`).",
+    "For the PDF ticket, generate a clean, printable UI view that can be downloaded (use standard browser print functionality or a library like html2canvas/jspdf)."
+  ]
+}

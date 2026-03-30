@@ -1,0 +1,51 @@
+{
+  "summary": "Completed comprehensive testing of ShowSpot (BookMyShow clone) - backend APIs fully functional, frontend mostly working with authentication integration issues",
+  "backend_issues": {
+    "critical_bugs": [],
+    "flaky_endpoints": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "AuthPage",
+        "issue": "Registration and login forms not properly submitting to backend APIs",
+        "selector": "button[type='submit']",
+        "fix_priority": "HIGH"
+      },
+      {
+        "component": "ChatBot",
+        "issue": "Chatbot toggle button has overlay interception preventing clicks",
+        "selector": "[data-testid='chatbot-toggle']",
+        "fix_priority": "MEDIUM"
+      }
+    ],
+    "integration_issues": [
+      {
+        "flow": "User authentication",
+        "issue": "Frontend auth forms not connecting to backend /api/auth/register and /api/auth/login endpoints",
+        "affected_selectors": ["input[type='email']", "input[type='password']", "button[type='submit']"]
+      }
+    ]
+  },
+  "passed_tests": [
+    "All 13 backend API endpoints working (movies, events, shows, auth, bookings, chat)",
+    "Home page loads with hero section and movie/event grids",
+    "Search functionality and navigation",
+    "Movie detail pages and show time display",
+    "Seat selection page with interactive grid",
+    "Seat selection functionality (A1, A2 selected, total Rs. 1000)",
+    "Theme toggle (dark/light mode)",
+    "Authentication page with Sign In/Sign Up tabs",
+    "Events page with event cards",
+    "Database seeding (8 movies, 5 theatres, 480 shows, 4 events)"
+  ],
+  "test_report_links": ["/app/backend_test.py"],
+  "success_percentage": {
+    "backend": "100% (13/13 tests passed)",
+    "frontend": "85% (core functionality works, auth integration needs fixing)"
+  },
+  "updated_files": ["/app/backend_test.py"],
+  "action_item_for_main_agent": "Fix frontend authentication integration - registration and login forms are not properly connecting to backend APIs. The forms render correctly but submissions don't reach /api/auth/register and /api/auth/login endpoints. Also fix chatbot overlay interception issue.",
+  "should_call_test_agent_after_fix": "true",
+  "should_main_agent_test_itself": "false"
+}

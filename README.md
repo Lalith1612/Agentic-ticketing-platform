@@ -1,1 +1,0 @@
-# Agentic-Ticketing-platform
