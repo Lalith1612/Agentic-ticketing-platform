@@ -20,16 +20,16 @@ from agents import OrchestratorAgent
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-# Use getenv so it doesn't crash instantly on a KeyError
+# Use .get() to avoid a fatal KeyError crash
 mongo_url = os.getenv('MONGO_URL')
+db_name = os.getenv('DB_NAME', 'showspot') # Defaults to 'showspot' if missing
+
 if not mongo_url:
-    raise ValueError("CRITICAL ERROR: MONGO_URL environment variable is missing!")
-
-client = AsyncIOMotorClient(mongo_url)
-
-# Use getenv and provide a default database name just in case
-db_name = os.getenv('DB_NAME', 'showspot') 
-db = client[db_name]
+    # This provides a clear error in your Render logs instead of a generic crash
+    print("CRITICAL ERROR: MONGO_URL environment variable is not set!")
+    
+client = AsyncIOMotorClient(mongo_url) if mongo_url else None
+db = client[db_name] if client else None
 
 app = FastAPI(title="ShowSpot API", version="2.0.0")
 api_router = APIRouter(prefix="/api")
