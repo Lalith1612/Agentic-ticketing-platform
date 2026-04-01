@@ -18,7 +18,9 @@ from seed_data import seed_database
 from agents import OrchestratorAgent
 
 ROOT_DIR = Path(__file__).parent
-load_dotenv(ROOT_DIR / '.env')
+env_path = ROOT_DIR / '.env'
+if env_path.exists():
+    load_dotenv(env_path)
 
 # Use .get() to avoid a fatal KeyError crash
 mongo_url = os.getenv('MONGO_URL')
