@@ -5,6 +5,7 @@ python-multipart==0.0.22
 
 # AI (Gemini — direct SDK only, no LangChain needed)
 google-generativeai==0.8.6
+langchain-google-genai
 
 # Database (MongoDB)
 motor==3.7.1
