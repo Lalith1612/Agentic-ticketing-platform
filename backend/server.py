@@ -20,9 +20,16 @@ from agents import OrchestratorAgent
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-mongo_url = os.environ['MONGO_URL']
+# Use getenv so it doesn't crash instantly on a KeyError
+mongo_url = os.getenv('MONGO_URL')
+if not mongo_url:
+    raise ValueError("CRITICAL ERROR: MONGO_URL environment variable is missing!")
+
 client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+
+# Use getenv and provide a default database name just in case
+db_name = os.getenv('DB_NAME', 'showspot') 
+db = client[db_name]
 
 app = FastAPI(title="ShowSpot API", version="2.0.0")
 api_router = APIRouter(prefix="/api")
